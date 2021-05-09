@@ -1,2 +1,15 @@
+*.pyc
+*~
+__pycache__
+__pycache__/
+**/__pycache__/
 env/
-.idea
+myprojectenv/
+.idea/
+.vscode/
+**/migrations/
+media/
+static/
+logs/
+logs/payments
+.env
