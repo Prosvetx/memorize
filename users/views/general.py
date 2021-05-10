@@ -9,3 +9,5 @@ class UserViewSet(ModelViewSet):
     permission_classes = (IsAdminUser,)
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    http_method_names = ['get', 'post', 'delete', 'put']
+
