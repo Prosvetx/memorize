@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
 from datetime import timedelta
 
 from pathlib import Path
@@ -17,6 +17,8 @@ from pathlib import Path
 import environ
 
 # initialize environment
+from django.template.context_processors import media
+
 env = environ.Env()
 environ.Env.read_env()
 
@@ -89,6 +91,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'users',
     'materials',
+    'images',
+    'intrests',
 ]
 
 MIDDLEWARE = [
@@ -169,8 +173,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
+MEDIA_ROOT = 'media'
+MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
