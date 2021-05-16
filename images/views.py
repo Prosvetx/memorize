@@ -16,6 +16,9 @@ class ImageListCreateView(generics.GenericAPIView,
     queryset = Image.objects.all()
     serializer_class = ImageSerializer
 
+    def get_serializer(self, *args, **kwargs):
+        return self.serializer_class(*args, **kwargs)
+
     def post(self, request, *args, **kwargs):
         return self.create(request, *args, **kwargs)
 

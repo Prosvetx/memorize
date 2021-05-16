@@ -93,6 +93,7 @@ INSTALLED_APPS = [
     'materials',
     'images',
     'intrests',
+    'tags'
 ]
 
 MIDDLEWARE = [

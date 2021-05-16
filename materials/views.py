@@ -2,6 +2,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
 
 from materials.models import Scope, Subdivision, Theme
+
 from materials.serializers.scope_serializers import ScopeSerializer
 from materials.serializers.subdivision_serializers import SubdivisionSerializer
 from materials.serializers.theme_serializers import ThemeSerializer
